@@ -17,3 +17,14 @@ document.getElementById('update-form').addEventListener('submit', function(e) {
   // Actualiser l'affichage
   fetchAndDisplayStocks();
 });
+function filterByBoutique() {
+  const selectedBoutique = document.getElementById('boutique-filter').value;
+  fetch('data.json')
+    .then(response => response.json())
+    .then(data => {
+      const filteredData = selectedBoutique === 'all' 
+        ? data.stocks 
+        : data.stocks.filter(item => item.boutique === selectedBoutique);
+      displayStocks(filteredData);
+    });
+}
