@@ -45,3 +45,4 @@ function displayStocks(stocks) {
   html += '</table>';
   document.getElementById('stocks').innerHTML = html;
 }
+html += `<td data-label="Produit">${item.produit}</td>`;
