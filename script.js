@@ -28,3 +28,20 @@ function filterByBoutique() {
       displayStocks(filteredData);
     });
 }
+function displayStocks(stocks) {
+  let html = '<table><tr><th>Produit</th><th>Boutique</th><th>Quantité</th></tr>';
+  
+  stocks.forEach(item => {
+    const isCritical = item.quantite < 5; // Seuil personnalisable
+    html += `
+      <tr style="${isCritical ? 'background-color: #ffdddd;' : ''}">
+        <td>${item.produit}</td>
+        <td>${item.boutique}</td>
+        <td>${item.quantite} ${isCritical ? '⚠️' : ''}</td>
+      </tr>
+    `;
+  });
+
+  html += '</table>';
+  document.getElementById('stocks').innerHTML = html;
+}
