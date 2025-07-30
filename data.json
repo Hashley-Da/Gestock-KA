@@ -1,1 +1,6 @@
-
+{
+  "stocks": [
+    {"produit": "Plaquette de frein", "boutique": "Douala", "quantite": 15},
+    {"produit": "Filtre à air", "boutique": "Yaoundé", "quantite": 8}
+  ]
+}
