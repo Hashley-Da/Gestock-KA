@@ -46,3 +46,9 @@ function displayStocks(stocks) {
   document.getElementById('stocks').innerHTML = html;
 }
 html += `<td data-label="Produit">${item.produit}</td>`;
+function updateStats(stocks) {
+  document.getElementById('total-count').textContent = stocks.length;
+  document.getElementById('alert-count').textContent = 
+    stocks.filter(item => item.quantite < 5).length;
+}
+// Appeler cette fonction après displayStocks()
