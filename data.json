@@ -1,6 +1,6 @@
 {
   "stocks": [
-    {"produit": "Plaquette de frein", "boutique": "Douala", "quantite": 15},
-    {"produit": "Filtre à air", "boutique": "Yaoundé", "quantite": 8}
+    {"produit": "Plaquette de frein", "boutique": "Bessengue", "quantite": 15},
+    {"produit": "Filtre à air", "boutique": "Axe-lourd", "quantite": 8}
   ]
 }
